@@ -1,0 +1,20 @@
+.header {
+    background-color: #4a96ff; 
+    color: white;
+    height: 50px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    font-size: 1em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  }
+  .header .barIcon {
+    cursor: pointer;
+  }
+.right-header {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}

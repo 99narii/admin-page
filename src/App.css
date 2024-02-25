@@ -1,7 +1,22 @@
-.App {
-  text-align: center;
+.app-container {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "sidebar content";
+  grid-template-columns: 240px 1fr; /* 사이드바 너비와 콘텐츠 영역을 정의 */
+  grid-template-rows: 60px 1fr; /* 헤더 높이와 콘텐츠 영역 높이를 정의 */
+  height: 100vh;
 }
 
+.header {
+  grid-area: header;
+  /* 추가 헤더 스타일 */
+}
+
+.sidebar {
+  grid-area: sidebar;
+  /* 추가 사이드바 스타일 */
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -1,0 +1,173 @@
+/*메인 페이지*/
+#dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f4f4;
+
+  }
+  
+  
+  #sidebar {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 200px;
+    height: calc(100vh - 60px); 
+    overflow-y: auto;
+    transition: transform 0.5s ease;
+  }
+  .sidebar-visible {
+    transform: translateX(0); /* 원래 위치로 */
+  }
+  
+  .sidebar-disabled {
+    transform: translateX(-100%); /* 사이드바 너비만큼 왼쪽으로 이동 */
+  }  
+  #sidebar li {
+    list-style: none;
+    cursor: pointer;
+    color: #333;
+    margin: 15px 0;
+  }
+  #sidebar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  #main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  /* Flexbox를 사용하여 사이드바와 메인 콘텐츠를 수평으로 배치합니다. */
+  @media (min-width: 768px) {
+    #dashboard {
+      flex-direction: row;
+    }
+  
+    #sidebar {
+      height: auto; /* 높이 재조정 */
+    }
+  }
+  
+/* 포스트 리스트*/
+.post-list-container {
+    padding: 0px;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  }
+  
+  .post-list-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8em;
+  }
+  .post-item-header {
+    padding: 7px;
+    border-bottom: 1px solid #d2d2d2;
+    display: flex;
+    align-items: center;
+    
+    .header-id, .header-user, .header-title {
+        margin-right: 55px;
+    }
+    .header-title, .header-edit {
+        margin: 0 50px
+    }
+  }
+  
+  .post-item {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    border-bottom: 1px solid #d2d2d2;
+  }
+  
+  .post-checkbox {
+    margin-right: 20px;
+  }
+  
+  .post-id, .post-user {
+    margin-right: 60px;
+  }
+  .post-title {
+    margin: 0 30px;
+  }
+  
+  .post-user {
+    color: #4a96ff;
+
+  }
+  .post-edit-btn {
+    margin-left: auto;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #4a96ff;
+    border-radius: 5px;
+    font-size: 0.9em;
+  }
+  
+  /*유저리스트 */
+  .user-list-container {
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  }
+  
+  .user-list-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8em;
+  }
+  
+  .user-item {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    border-bottom: 1px solid #d2d2d2;
+  }
+  
+  .user-checkbox {
+    margin-right: 20px;
+  }
+  
+  .user-id, .user-user, .user-email {
+    margin-right: 60px;
+  }
+  .user-email {
+    margin: 0 20px;
+  }
+  
+  .user-user {
+    color: #4a96ff;
+
+  }
+  .user-edit-btn {
+    margin-left: auto;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #4a96ff;
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 0.9em;
+  }
+  
